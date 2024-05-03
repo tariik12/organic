@@ -1,0 +1,107 @@
+/* index.css */
+
+/* Tailwind CSS directives to include base styles, component styles, and utility classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.slick-arrow{
+    background: #84CC16 !important;
+    border-radius: 100%;
+    position: absolute !important;
+}
+
+
+.slick-prev{
+    background: #84CC16 !important;
+    position: absolute !important;
+    z-index: 10;
+    margin-left: 30px !important;
+    height: 50px !important;
+    width: 50px !important;  
+}
+.slick-next{
+    background: #84CC16 !important;
+    position: absolute !important;
+    z-index: 10;
+    margin-right: 30px !important;
+   height: 50px !important;
+   width: 50px !important;  
+   
+}
+slick-next.hover::after {
+    background: #524540 !important;
+    position: absolute !important;
+    z-index: 10;
+    margin-right: 30px !important;
+   height: 50px !important;
+   width: 50px !important;  
+   
+}
+
+/* TODO form */
+/* form{
+    @apply flex flex-col w-full justify-center items-center z-40
+} */
+/* Styling for input fields */
+input {
+    @apply px-2 my-1 rounded-xl border-2 border-lime-500 font-thin text-sm outline-none bg-[#84CC16] text-white;
+}
+
+/* Styling for textarea fields */
+textarea {
+    @apply px-2 my-1 rounded-xl border-2 border-lime-500 font-thin text-sm outline-none bg-[#84CC16] text-white;
+}
+
+/* Styling for select dropdowns */
+select {
+    @apply px-2 my-1 py-2 rounded-xl border-2 border-lime-500 font-thin text-sm outline-none bg-[#84CC16] text-white;
+}
+
+/* Styling for buttons */
+button {
+    @apply border-2 px-3 rounded-md  hover:text-white my-2  text-[#292828] border-lime-500 disabled:text-red-300;
+    background-color: #84CC16 !important;
+}
+
+/* Styling for placeholder text color on hover */
+input:hover::placeholder {
+    color: rgb(61, 5, 246);
+}
+textarea:hover::placeholder {
+    color: rgb(61, 5, 246);
+}
+
+/* Styling for paragraphs */
+p {
+    @apply font-thin font-sans text-slate-900 text-base;
+}
+
+/* Custom styling using a custom class for a border */
+.border-cl {
+    border: 2px solid #800000;
+}
+
+/* Custom styling using a custom class for background color */
+.bg-back {
+    background-color: #84CC16;
+}
+
+table {
+    @apply min-w-full border;
+}
+tr {
+    @apply min-w-full border;
+}
+th{
+    @apply border p-2 text-xs font-medium text-gray-500 bg-gray-50 uppercase tracking-wider whitespace-nowrap
+}
+
+td{
+    @apply border p-2 whitespace-nowrap;
+}
+h1{
+    @apply text-2xl uppercase  py-3
+}       
+           
