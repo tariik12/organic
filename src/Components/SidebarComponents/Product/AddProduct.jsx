@@ -32,109 +32,109 @@ console.log(data)
   };
 
   return (
-    <div>
+    <div className="">
       <form
-        className="flex flex-col w-screen justify-evenly  py-5"
+        className="flex flex-col    py-5"
         onSubmit={handleSubmit(handleUpload)}
       >
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="file">Product Image:</label>
-          <input className='p-2 h-12 w-1/2 border rounded-md' required type='file' accept='image/*' {...register('productImage')} />
+          <input className='p-2 h-12  border rounded-md' required type='file' accept='image/*' {...register('productImage')} />
          
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="productName">Product Name:</label>
           <input
             id="productName"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Product Name"
             {...register("productName")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="parentTitle">Parent Title:</label>
           <input
             id="parentTitle"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Parent Title"
             {...register("parentTitle")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="type">Type:</label>
           <input
             id="type"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Type"
             {...register("type")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="madeIn">Made In:</label>
           <input
             id="madeIn"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Made In"
             {...register("madeIn")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="netWeight">Net Weight:</label>
           <input
             id="netWeight"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Net Weight"
             {...register("netWeight")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="price">Price:</label>
           <input
             id="price"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="text"
             placeholder="Enter Price"
             {...register("price")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="prePrice">Previous Price:</label>
           <input
             id="prePrice"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="number"
             placeholder="Enter Previous Price"
             {...register("prePrice")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="expired">Expired Date:</label>
           <input
             id="expired"
-            className="p-2 h-12 w-1/2 border rounded-md"
+            className="p-2 h-12  border rounded-md"
             type="date"
             placeholder="Enter Previous Price"
             {...register("expired")}
             required
           />
         </div>
-        <div className="flex flex-col w-screen">
+        <div className="flex flex-col ">
           <label htmlFor="description">Description:</label>
           <textarea
             id="description"
-            className="p-2 h-24 w-1/2 border rounded-md"
+            className="p-2 h-24  border rounded-md"
             type="text"
             placeholder="Enter Description"
             {...register("description")}
@@ -142,7 +142,7 @@ console.log(data)
           />
         </div>
         <button
-          className="text-lg  w-1/2 text-white bg-green-500 hover:bg-green-600 border border-green-500 rounded-md p-2"
+          className="text-lg  w-full text-white bg-green-500 hover:bg-green-600 border border-green-500 rounded-md p-2"
           type="submit"
         >
           Upload

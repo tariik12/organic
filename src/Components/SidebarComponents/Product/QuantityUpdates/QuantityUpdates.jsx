@@ -7,15 +7,15 @@ import QuantityUpdateForm from "../FormModal/QuantityUpdateForm";
 import { MdDeleteSweep } from 'react-icons/md';
 
 const QuantityUpdates = () => {
-  const { Products, deleteProduct } = useContext(ProductContext);
+  const { products, deleteProduct } = useContext(ProductContext);
   const [data, setData] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    setData(Products);
-  }, [Products]);
+    setData(products);
+  }, [products]);
 
   const openModal = (product) => {
     setSelectedProduct(product);

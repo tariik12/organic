@@ -19,7 +19,7 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
 
 <div className='relative flex flex-1 flex-col overflow-auto overflow-x-hidden'>
     {/* The navbar shows top  right to middle */}
-    <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} ></Navbar>
+    {/* <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} ></Navbar> */}
 <main>
     <div className="mx-auto max-w-screen-2xl p-4 md:p-6  2xl:p-10">
         {/* render child components when click any submenu */}

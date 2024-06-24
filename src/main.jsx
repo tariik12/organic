@@ -14,13 +14,15 @@ import { UsersProvider } from "./provider/UsersProvider/UsersProvider";
 import { router } from "./provider/Route/Route";
 import { ProductProvider } from "./provider/ItemProvider/ProductProvider";
 import AuthProvider from "./provider/AuthProvider/AuthProvider";
+import { SoldProvider } from "./provider/SoldProvider/SoldProvider";
 
 // Render the application
 ReactDOM.createRoot(document.getElementById("root")).render(
   <UsersProvider>
     <ProductProvider>
       
-       
+       <SoldProvider>
+
           
             <AuthProvider>
              
@@ -30,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <ToastContainer />
             </AuthProvider>
           
+       </SoldProvider>
         
      
     </ProductProvider>

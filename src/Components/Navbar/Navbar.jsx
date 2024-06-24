@@ -1,33 +1,46 @@
-import { Link } from "react-router-dom";
-// import DropdownUser from "./dropdownUser";
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ProductContext } from '../../provider/ItemProvider/ProductProvider';
 
-import logo from '/logo.jpeg'
-const Navbar = (props) =>{
-    const userData = JSON.parse(localStorage.getItem("memberData"));
-    return(
-        <header className="sticky top-0 z-20 flex w-full bg-back border-4 border-cl  drop-shadow-1 ">
-            <div className="flex flex-grow Products-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11 ">
-<div className="flex Products-center gap-2 sm:gap-4 lg:hidden">
-<button onClick={(e) =>{
-    e.stopPropagation();
-    props.setSidebarOpen(!props.sidebarOpen)
-}}>
-open Side bar
-</button>
-<Link className="block flex-shrink-0 lg:hidden" to='/organic-food'>
-    <img className="w-[70px]" src={logo} alt="Bangladesh Army Logo"/>
-</Link>
-</div>
-            </div>
-            <div className="flex Products-center gap-3 2xsm:gap-7">
-          
+const Navbar = () => {
+  const { products_approved } = useContext(ProductContext);
+  const [state, setState] = useState(false);
+  const uniqueParentTitle = [...new Set(products_approved.map(parent => parent.parentTitle))];
 
-          {/* <!-- User Area --> */}
-          {/* <DropdownUser /> */}
-          {/* <!-- User Area --> */}
+  const handleAllProduct = () => {
+    setState(true);
+  };
+  const handleMouseLeave = () => {
+    setState(false);
+  };
+ 
+
+  return (
+    <div>
+      <div className='grid grid-cols-5 gap-5 ' >
+        <div>
+          <button onMouseEnter={handleAllProduct}
+                     
+
+          >All</button>
         </div>
-        </header>
-    )
-}
+        <div className='col-span-3 flex items-center justify-around'>
+          {uniqueParentTitle.slice(0, 3).map((parent_title, index) => (
+            <Link key={index} to={`/product-category/${parent_title}`}>{parent_title}</Link>
+          ))}
+        </div>
+      </div>
+      {state === true && (
+        <div className='relative z-50 top-0'  onMouseLeave={handleMouseLeave}>
+          <div className='absolute ps-20 grid grid-cols-8 w-full  gap-3 '>
+          {uniqueParentTitle.map((parent_title, index) => (
+            <div className='bg-white p-5 border rounded-xl'><Link className=' text-center' key={index} to={`/product-category/${parent_title}`} >{parent_title}</Link></div>
+          ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Navbar;

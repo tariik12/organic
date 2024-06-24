@@ -32,9 +32,9 @@ const Banner = () => {
       };
     return (
         <div>
-            <Slider {...settings} className="mb-10">
+            <Slider {...settings} className="mb-10 z-20">
             {
-              organicBanner?.map((room) =><div key={room._id}>
+              organicBanner?.map((room, index) =><div key={index}>
               <img className="w-full  h-[250px] md:h-[450px]" src={room.image} alt="" />
            </div>
              

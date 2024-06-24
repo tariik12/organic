@@ -4,13 +4,10 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import logo from '/logo.jpeg';
 
 const usersMenus = [
-  {
-    text: "Profile",
-    link_to: "profile",
-  },
+
   {
     text: "My Card",
-    link_to: "my-card",
+    link_to: "my-cart",
   },
   {
     text: "My Bought Product",
@@ -19,6 +16,7 @@ const usersMenus = [
 ];
 
 const managerMenus = [
+
   {
     text: "Add Products",
     link_to: "add-products",
@@ -28,12 +26,21 @@ const managerMenus = [
     link_to: "list-product-manager",
   },
   {
-    text: "Stock Counts",
-    link_to: "stock-counts",
+    text: "My Card",
+    link_to: "my-cart",
+  },
+  {
+    text: "My Bought Product",
+    link_to: "my-bought-product",
   },
 ];
 
 const adminMenus = [
+
+  {
+    text: "Dashboard",
+    link_to: "dashboard",
+  },
   {
     text: "Add Products",
     link_to: "add-products",
@@ -46,13 +53,22 @@ const adminMenus = [
     text: "Quantity Update",
     link_to: "quantity-update",
   },
-  {
-    text: "Stock Counts",
-    link_to: "stock-counts",
-  },
+ 
   {
     text: "Manage Users",
     link_to: "manage-user",
+  },
+  {
+    text: "All Sold History",
+    link_to: "sold-history",
+  },
+  {
+    text: "My Card",
+    link_to: "my-cart",
+  },
+  {
+    text: "My Bought Product",
+    link_to: "my-bought-product",
   },
 ];
 
@@ -102,7 +118,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         <Link to="/">
           <img className="w-[100px] mx-auto  rounded-full" src={logo} alt="Bangladesh Army Logo" />
         </Link>
-        <p className="text-4xl">{memberData.role}</p>
+        <Link to='/organic-food' title="Click Me For Profile"><p className="text-4xl">{memberData.role}</p></Link>
         <IoMdCloseCircleOutline ref={trigger} onClick={() => setSidebarOpen(!sidebarOpen)} className="block lg:hidden text-purple-700 text-4xl font-extrabold text-right" />
       </div>
       <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
