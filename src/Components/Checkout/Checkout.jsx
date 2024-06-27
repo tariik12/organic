@@ -44,22 +44,22 @@ const Checkout = () => {
             <label className="block text-sm font-medium">Name</label>
             <input type="text" className="mt-1 p-2 border rounded w-full" {...register('name', { required: true })} />
             </div>
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium">District</label>
               <select className="mt-1 p-2 border rounded w-full">
                 <option>Choose</option>
-                {/* Add more options as needed */}
+               
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium">Your Zone</label>
               <select className="mt-1 p-2 border rounded w-full">
                 <option>Choose</option>
-                {/* Add more options as needed */}
+               
               </select>
-            </div>
+            </div> */}
             <div>
-            <label className="block text-sm font-medium">Street Address</label>
+            <label className="block text-sm font-medium"> Address</label>
             <input type="text" className="mt-1 p-2 border rounded w-full" {...register('address', { required: true })} />
             </div>
             <div>
@@ -74,22 +74,22 @@ const Checkout = () => {
               <label className="block text-sm font-medium">Email </label>
               <input type="email" className="mt-1 p-2 border rounded w-full" {...register('email', { required: true })} />
             </div>
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium">Product Delivery Place</label>
               <input type="text" className="mt-1 p-2 border rounded w-full" />
-            </div>
+            </div> */}
             <div>
               <label className="block text-sm font-medium">Delivery Date</label>
               <input type="date" className="mt-1 p-2 border rounded w-full" />
             </div>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <input type="checkbox" id="create-account" className="mr-2" />
               <label htmlFor="create-account" className="text-sm">Create an account?</label>
             </div>
             <div className="flex items-center">
               <input type="checkbox" id="ship-different-address" className="mr-2" />
               <label htmlFor="ship-different-address" className="text-sm">Ship to a different address?</label>
-            </div>
+            </div> */}
             <div>
               <label className="block text-sm font-medium">Special Notes (optional)</label>
               <textarea className="mt-1 p-2 border rounded w-full" rows="3"></textarea>

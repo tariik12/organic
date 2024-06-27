@@ -74,14 +74,14 @@ const ViewCart = () => {
         {cart.length > 0 && (
           <div>
             <div className="bg-gray-100 p-4 rounded-lg">
-              <div className="flex justify-between mb-2">
+              {/* <div className="flex justify-between mb-2">
                 <span>Subtotal</span>
                 <span>৳ {calculateTotalPrice()}</span>
-              </div>
-              <div className="flex justify-between mb-2">
+              </div> */}
+              {/* <div className="flex justify-between mb-2">
                 <span>Shipping</span>
                 <button className="text-green-600 underline">Calculate shipping</button>
-              </div>
+              </div> */}
               <div className="flex justify-between font-semibold text-xl">
                 <span>Total</span>
                 <span>৳ {calculateTotalPrice()}</span>
